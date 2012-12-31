@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+               xmlns:s="library://ns.adobe.com/flex/spark"
+               xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:myns="test.*"
+			   applicationComplete="init()"
+			   backgroundColor="0x0b0010">
+			   
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<!--<myns:NewClass></myns:NewClass>-->
+	<!--<myns:NewClassView></myns:NewClassView>-->
+	<!--<s:Button width="100" height="100" label="helloWorld" name="myBtn" id="myBtn" click="btnClick(event)"></s:Button>-->
+	<s:Label text="Some"></s:Label>
+	<fx:Script>
+		<![CDATA[
+		
+			import flash.display.Sprite;
+			import flash.events.MouseEvent;
+			import test.NewClass;
+			
+			private var m:App = new App();
+			private function init():void
+			{
+				stage.addChild(m);
+				trace(stage.stageHeight);
+				
+				var nc:NewClass = new NewClass();
+				//stage.addChild(nc);
+			}
+			
+			private function btnClick(evt:MouseEvent):void
+			{
+				trace("!!!ololo!!!");
+			}
+		]]>
+	</fx:Script>
+</s:Application>
